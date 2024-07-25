@@ -1,0 +1,15 @@
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore virtual environment directory
+venv/
+
+# Ignore node modules directory
+node_modules/
+
+# Ignore other typical files and directories
+.DS_Store
+*.log
+.dockerignore

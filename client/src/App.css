@@ -1,0 +1,279 @@
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  color: #007bff;
+}
+
+body.dark-mode h1 {
+  color: #1e90ff;
+}
+
+/* Form elements */
+textarea,
+select,
+.form-control {
+  width: calc(100% - 20px);
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Rounded corners */
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.3s, color 0.3s;
+}
+
+textarea:focus,
+select:focus,
+.form-control:focus {
+  outline: none;
+  border-color: #007bff; /* Focus color */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Focus shadow */
+}
+
+body.dark-mode textarea,
+body.dark-mode select,
+body.dark-mode .form-control {
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+body.dark-mode textarea:focus,
+body.dark-mode select:focus,
+body.dark-mode .form-control:focus {
+  border-color: #1e90ff; /* Focus color in dark mode */
+  box-shadow: 0 0 5px rgba(30, 144, 255, 0.5); /* Focus shadow in dark mode */
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px; /* Rounded edges */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+}
+
+body.dark-mode .btn {
+  color: #fff;
+}
+
+body.dark-mode .btn-primary {
+  background-color: #1e90ff;
+}
+
+body.dark-mode .btn-primary:hover {
+  background-color: #1c86ee;
+}
+
+body.dark-mode .btn-danger {
+  background-color: #ff4500;
+}
+
+body.dark-mode .btn-danger:hover {
+  background-color: #ff6347;
+}
+
+body.dark-mode .btn-secondary {
+  background-color: #555;
+}
+
+body.dark-mode .btn-secondary:hover {
+  background-color: #666;
+}
+
+body.dark-mode .btn-info {
+  background-color: #00ced1;
+}
+
+body.dark-mode .btn-info:hover {
+  background-color: #20b2aa;
+}
+
+/* Content layout */
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.left-panel {
+  flex: 0 0 40%;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body.dark-mode .left-panel {
+  background-color: #444;
+  border: 1px solid #666;
+}
+
+.left-panel .mb-3 {
+  margin-bottom: 15px; /* Increase vertical spacing */
+}
+
+.left-panel .text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px; /* Increase vertical spacing */
+}
+
+.left-panel .btn {
+  margin-right: 10px; /* Adjust horizontal spacing */
+}
+
+.left-panel .mb-3:last-child {
+  margin-bottom: 0; /* Remove bottom margin for the last element */
+}
+
+.right-panel {
+  flex: 0 0 60%;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body.dark-mode .right-panel {
+  background-color: #444;
+  border: 1px solid #666;
+}
+
+/* Table styling */
+.table-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85em;
+  border: 1px solid #ddd; /* Single border around the entire table */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode table {
+  border: 1px solid #666;
+}
+
+table th,
+table td {
+  border: none; /* Remove individual cell borders */
+  padding: 8px;
+  text-align: left;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+table th {
+  background-color: #007bff; /* Header background color */
+  color: #fff; /* Header text color */
+  font-weight: bold;
+}
+
+body.dark-mode table th {
+  background-color: #1e90ff;
+  color: #fff;
+}
+
+/* Dark mode for table rows */
+body.dark-mode table tbody tr {
+  background-color: #555; /* Dark background color for all rows */
+}
+
+body.dark-mode table tbody tr:nth-child(even) {
+  background-color: #555; /* Ensure even rows have the same dark background color */
+}
+
+body.dark-mode table tbody tr:nth-child(odd) {
+  background-color: #555; /* Ensure odd rows have the same dark background color */
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #0056b3;
+}
+
+body.dark-mode .dark-mode-toggle {
+  background-color: #1e90ff;
+  color: black; /* Change text color to black in dark mode */
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+  background-color: #1c86ee;
+  color: black; /* Ensure text color stays black on hover */
+}
